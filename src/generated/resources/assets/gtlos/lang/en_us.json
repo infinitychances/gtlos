@@ -1,0 +1,23 @@
+{
+  "block.gtlos.lv_pellet_decompositioner": "Basic Pellet Decompositioner §r",
+  "block.gtlos.mv_pellet_decompositioner": "§bAdvanced Pellet Decompositioner §r",
+  "block.gtlos.ulv_pellet_decompositioner": "Primitive Pellet Decompositioner §r",
+  "block.gtlos.x16_coke_oven": "X16 Coke Oven",
+  "block.gtlos.x2_coke_oven": "X2 Coke Oven",
+  "block.gtlos.x4_coke_oven": "X4 Coke Oven",
+  "block.gtlos.x8_coke_oven": "X8 Coke Oven",
+  "item.gtlos.blank_universal_circuit": "Blank Universal Circuit",
+  "item.gtlos.hv_universal_circuit": "HV Universal Circuit",
+  "item.gtlos.lv_universal_circuit": "LV Universal Circuit",
+  "item.gtlos.mv_universal_circuit": "MV Universal Circuit",
+  "item.gtlos.oxygen_pellet": "Oxygen Pellet",
+  "item.gtlos.ulv_universal_circuit": "ULV Universal Circuit",
+  "itemGroup.gtlos.machines": "GTLOS Machines",
+  "itemGroup.gtlos.main": "GTLOS Items",
+  "material.gtlos.bio_solder": "Bio Solder",
+  "material.gtlos.enriched_illonium": "Enriched Illonium",
+  "material.gtlos.illonium": "Illonium",
+  "material.gtlos.spacium": "Spacium",
+  "tooltip.gtlos.machine.coke_oven_description": "Making better fuels for Steel and Power",
+  "tooltip.gtlos.machine.coke_oven_parallels": "Gains Parallels with each layer added in length for a maximum of %s parallels total"
+}

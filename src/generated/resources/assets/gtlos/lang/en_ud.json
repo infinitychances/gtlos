@@ -1,0 +1,23 @@
+{
+  "block.gtlos.lv_pellet_decompositioner": "ɹ§ ɹǝuoıʇısodɯoɔǝᗡ ʇǝןןǝԀ ɔısɐᗺ",
+  "block.gtlos.mv_pellet_decompositioner": "ɹ§ ɹǝuoıʇısodɯoɔǝᗡ ʇǝןןǝԀ pǝɔuɐʌpⱯq§",
+  "block.gtlos.ulv_pellet_decompositioner": "ɹ§ ɹǝuoıʇısodɯoɔǝᗡ ʇǝןןǝԀ ǝʌıʇıɯıɹԀ",
+  "block.gtlos.x16_coke_oven": "uǝʌO ǝʞoƆ 9ƖX",
+  "block.gtlos.x2_coke_oven": "uǝʌO ǝʞoƆ ᄅX",
+  "block.gtlos.x4_coke_oven": "uǝʌO ǝʞoƆ ㄣX",
+  "block.gtlos.x8_coke_oven": "uǝʌO ǝʞoƆ 8X",
+  "item.gtlos.blank_universal_circuit": "ʇınɔɹıƆ ןɐsɹǝʌıu∩ ʞuɐןᗺ",
+  "item.gtlos.hv_universal_circuit": "ʇınɔɹıƆ ןɐsɹǝʌıu∩ ΛH",
+  "item.gtlos.lv_universal_circuit": "ʇınɔɹıƆ ןɐsɹǝʌıu∩ ΛꞀ",
+  "item.gtlos.mv_universal_circuit": "ʇınɔɹıƆ ןɐsɹǝʌıu∩ ΛW",
+  "item.gtlos.oxygen_pellet": "ʇǝןןǝԀ uǝbʎxO",
+  "item.gtlos.ulv_universal_circuit": "ʇınɔɹıƆ ןɐsɹǝʌıu∩ ΛꞀ∩",
+  "itemGroup.gtlos.machines": "sǝuıɥɔɐW SOꞀ⟘⅁",
+  "itemGroup.gtlos.main": "sɯǝʇI SOꞀ⟘⅁",
+  "material.gtlos.bio_solder": "ɹǝpןoS oıᗺ",
+  "material.gtlos.enriched_illonium": "ɯnıuoןןI pǝɥɔıɹuƎ",
+  "material.gtlos.illonium": "ɯnıuoןןI",
+  "material.gtlos.spacium": "ɯnıɔɐdS",
+  "tooltip.gtlos.machine.coke_oven_description": "ɹǝʍoԀ puɐ ןǝǝʇS ɹoɟ sןǝnɟ ɹǝʇʇǝq buıʞɐW",
+  "tooltip.gtlos.machine.coke_oven_parallels": "ןɐʇoʇ sןǝןןɐɹɐd %s ɟo ɯnɯıxɐɯ ɐ ɹoɟ ɥʇbuǝן uı pǝppɐ ɹǝʎɐן ɥɔɐǝ ɥʇıʍ sןǝןןɐɹɐԀ suıɐ⅁"
+}
