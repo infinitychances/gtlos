@@ -12,8 +12,8 @@ import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.*;
 public class GTLOSRecipeTypes {
 	public static void init() {}
 
-	public static final String CREATION = "creation";
-	public static final GTRecipeType PELLET_DECOMPOSITIONING = register("pellet_decompositioning", CREATION)
+	public static final String SPACE = "space";
+	public static final GTRecipeType PELLET_DECOMPOSITIONING = register("pellet_decompositioning", SPACE)
 			.setMaxIOSize(1, 0, 0,1)
 			.setEUIO(IO.IN)
 			.setSlotOverlay(true, true, GuiTextures.FLUID_SLOT)
