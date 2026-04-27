@@ -14,12 +14,11 @@ import net.minecraft.world.level.block.Blocks;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.gregtechceu.gtceu.api.pattern.Predicates.blocks;
-import static com.gregtechceu.gtceu.api.pattern.Predicates.controller;
+import static com.gregtechceu.gtceu.api.pattern.Predicates.*;
 import static com.gregtechceu.gtceu.api.pattern.util.RelativeDirection.*;
-import static com.gregtechceu.gtceu.common.data.GTBlocks.CASING_COKE_BRICKS;
-import static com.gregtechceu.gtceu.common.data.GTMachines.COKE_OVEN_HATCH;
-import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.COKE_OVEN_RECIPES;
+import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
+import static com.gregtechceu.gtceu.common.data.GTMachines.*;
+import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.*;
 import static com.infinitychances.gtlos.GTLOS.REGISTRATE;
 
 public class GTLOSMachineUtil {

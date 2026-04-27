@@ -11,8 +11,15 @@ import static com.infinitychances.gtlos.GTLOS.REGISTRATE;
 public class GTLOSCreativeModeTab {
 	public static RegistryEntry<CreativeModeTab> MAIN = REGISTRATE.defaultCreativeTab("main",
 					builder -> builder.displayItems(new GTCreativeModeTabs.RegistrateDisplayItemsGenerator("main", REGISTRATE))
-							.icon(() -> GTLOSItems.UNIVERSAL_ULV_CIRCUIT.asStack())
+							.icon(() -> GTLOSItems.OXYGEN_PELLET.asStack())
 							.title(REGISTRATE.addLang("itemGroup", GTLOS.id("main"), "GTLOS Items"))
+							.build())
+			.register();
+
+	public static RegistryEntry<CreativeModeTab> CIRCUITS = REGISTRATE.defaultCreativeTab("circuits",
+					builder -> builder.displayItems(new GTCreativeModeTabs.RegistrateDisplayItemsGenerator("circuits", REGISTRATE))
+							.icon(() -> GTLOSCircuits.UNIVERSAL_LV_CIRCUIT.asStack())
+							.title(REGISTRATE.addLang("itemGroup", GTLOS.id("circuits"), "GTLOS Circuits"))
 							.build())
 			.register();
 
