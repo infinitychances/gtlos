@@ -1,10 +1,14 @@
 package com.infinitychances.gtlos;
 
+import appeng.core.definitions.AEBlocks;
+import appeng.core.definitions.AEItems;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
+import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 
 import com.infinitychances.gtlos.common.data.GTLOSElements;
+import com.infinitychances.gtlos.common.data.GTLOSMaterials;
 import com.infinitychances.gtlos.common.data.GTLOSRecipeTypes;
 import com.infinitychances.gtlos.common.data.GTLOSRecipeInit;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -31,6 +35,7 @@ public class GTLOSGTAddon implements IGTAddon {
     @Override
     public void registerTagPrefixes() {
         // CustomTagPrefixes.init();
+	    TagPrefix.block.setIgnored(GTLOSMaterials.Fluix, AEBlocks.FLUIX_BLOCK);
     }
 
     @Override

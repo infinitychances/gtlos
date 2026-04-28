@@ -16,6 +16,13 @@ public class GTLOSCreativeModeTab {
 							.build())
 			.register();
 
+	public static RegistryEntry<CreativeModeTab> BLOCKS = REGISTRATE.defaultCreativeTab("blocks",
+					builder -> builder.displayItems(new GTCreativeModeTabs.RegistrateDisplayItemsGenerator("blocks", REGISTRATE))
+							.icon(() -> GTLOSBlocks.COIL_RUBIDIUM.asStack())
+							.title(REGISTRATE.addLang("itemGroup", GTLOS.id("blocks"), "GTLOS Blocks"))
+							.build())
+			.register();
+
 	public static RegistryEntry<CreativeModeTab> CIRCUITS = REGISTRATE.defaultCreativeTab("circuits",
 					builder -> builder.displayItems(new GTCreativeModeTabs.RegistrateDisplayItemsGenerator("circuits", REGISTRATE))
 							.icon(() -> GTLOSCircuits.UNIVERSAL_LV_CIRCUIT.asStack())
