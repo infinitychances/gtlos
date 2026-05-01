@@ -1,6 +1,7 @@
 package com.infinitychances.gtlos.common.data;
 
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
+import com.infinitychances.gtlos.data.recipe.GTLOSTags;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 
@@ -11,6 +12,7 @@ public class GTLOSCircuits {
 		REGISTRATE.creativeModeTab(() -> GTLOSCreativeModeTab.CIRCUITS);
 	}
 
+	public static ItemEntry<Item> CRUDE_CIRCUIT = REGISTRATE.item("crude_circuit", Item::new).lang("Crude Circuit").tag(GTLOSTags.STEAM_CIRCUITS).register();
 	public static ItemEntry<Item> BLANK_UNIVERSAL_CIRCUIT = REGISTRATE.item("blank_universal_circuit", Item::new).lang("Blank Universal Circuit").register();
 	public static ItemEntry<Item> UNIVERSAL_ULV_CIRCUIT = REGISTRATE.item("ulv_universal_circuit", Item::new).lang("ULV Universal Circuit").tag(CustomTags.ULV_CIRCUITS).register();
 	public static ItemEntry<Item> UNIVERSAL_LV_CIRCUIT = REGISTRATE.item("lv_universal_circuit", Item::new).lang("LV Universal Circuit").tag(CustomTags.LV_CIRCUITS).register();

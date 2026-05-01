@@ -1,0 +1,7 @@
+{
+  "parent": "gtceu:block/cube_2_layer/all",
+  "textures": {
+    "bot_all": "gtlos:block/casings/coils/machine_coil_rubidium",
+    "top_all": "gtlos:block/casings/coils/machine_coil_rubidium_bloom"
+  }
+}

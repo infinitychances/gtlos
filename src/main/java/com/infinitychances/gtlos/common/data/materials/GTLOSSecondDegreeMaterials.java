@@ -5,6 +5,7 @@ import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.infinitychances.gtlos.GTLOS;
+import net.minecraft.world.item.Items;
 
 import static com.infinitychances.gtlos.common.data.GTLOSMaterials.*;
 import static com.gregtechceu.gtceu.api.GTValues.*;

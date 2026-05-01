@@ -9,6 +9,7 @@ import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.infinitychances.gtlos.GTLOS;
 import com.infinitychances.gtlos.common.data.GTLOSCreativeModeTab;
 import com.infinitychances.gtlos.common.data.GTLOSElements;
+import com.infinitychances.gtlos.common.util.Math;
 
 import static com.infinitychances.gtlos.common.data.GTLOSMaterials.*;
 import static com.gregtechceu.gtceu.api.GTValues.*;
@@ -29,7 +30,7 @@ public class GTLOSElementMaterials {
 				.element(GTLOSElements.Il)
 				.cableProperties(V[OpV], 32,0, true)
 				.iconSet(SHINY)
-				.blast(b -> b.temp(10000, BlastProperty.GasTier.HIGHEST).blastStats(VA[UEV], 50).vacuumStats(VA[ZPM], 240))
+				.blast(b -> b.temp(15000, BlastProperty.GasTier.HIGHEST).blastStats(VA[UEV], Math.secondsToTicks(120)).vacuumStats(VA[ZPM], Math.secondsToTicks(30)))
 				.buildAndRegister();
 
 		EnrichedIllonium = new Material.Builder(GTLOS.id("enriched_illonium"))
@@ -45,6 +46,5 @@ public class GTLOSElementMaterials {
 				.iconSet(ROUGH)
 				.color(0x24273b)
 				.buildAndRegister();
-
 	}
 }

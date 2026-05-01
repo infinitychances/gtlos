@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "gtlos:block/rubidium_coil_block"
+    },
+    "active=true": {
+      "model": "gtlos:block/rubidium_coil_block_active"
+    }
+  }
+}

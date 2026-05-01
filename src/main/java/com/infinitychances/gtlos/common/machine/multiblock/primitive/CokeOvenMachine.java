@@ -56,7 +56,8 @@ public class CokeOvenMachine extends PrimitiveWorkableMachine implements IUIMach
 			CokeOvenMachine.class, PrimitiveWorkableMachine.MANAGED_FIELD_HOLDER);
 
 	private static final int BASE_SIZE = 2;
-	public static final int MAX_PARALLELS = 16;
+	public static final int MAX_PARALLEL_SIZE = 16;
+	@Persisted
 	public final int parallels;
 
 	@Persisted

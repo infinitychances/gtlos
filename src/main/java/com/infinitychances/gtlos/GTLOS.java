@@ -4,18 +4,15 @@ import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
-import com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty;
-import com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty;
-import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import com.gregtechceu.gtceu.api.sound.SoundEntry;
 
-import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.infinitychances.gtlos.common.data.*;
 import com.infinitychances.gtlos.common.data.machine.GTLOSMachines;
 import com.infinitychances.gtlos.common.data.machine.GTLOSMultiblockMachines;
+import com.infinitychances.gtlos.data.recipe.GTLOSTags;
 import com.infinitychances.gtlos.data.GTLOSDatagen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
@@ -67,6 +64,7 @@ public class GTLOS {
 	public static void init() {
 		GTLOSItems.init();
 		GTLOSBlocks.init();
+		GTLOSTags.init();
 		GTLOSDatagen.init();
 	}
 

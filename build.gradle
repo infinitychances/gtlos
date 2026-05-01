@@ -151,6 +151,7 @@ dependencies {
     //Other mods
     modImplementation("curse.maven:applied-energistics-2-223794:7148487")
     modImplementation("curse.maven:guideme-1173950:7127447")
+    //modImplementation("curse.maven:theurgy-430636:7816723")
 
 
     // GregTech and dependencies

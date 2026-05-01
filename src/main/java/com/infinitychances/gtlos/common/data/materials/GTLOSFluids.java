@@ -17,7 +17,7 @@ public class GTLOSFluids {
 		BioSolder = new Material.Builder(GTLOS.id("bio_solder"))
 				.ingot(1)
 				.liquid(new FluidBuilder().temperature(970))
-				.color(0x295a13).secondaryColor(0x197561/*0x13594a*/)
+				.color(0x227017).secondaryColor(0x197561/*0x13594a*/)
 				.buildAndRegister();
 
 	}
