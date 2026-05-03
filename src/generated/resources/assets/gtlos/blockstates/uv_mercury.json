@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "gtlos:block/machine/uv_mercury",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "gtlos:block/machine/uv_mercury",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gtlos:block/machine/uv_mercury"
+    },
+    "facing=south": {
+      "model": "gtlos:block/machine/uv_mercury",
+      "y": 180
+    },
+    "facing=up": {
+      "gtceu:z": 180,
+      "model": "gtlos:block/machine/uv_mercury",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "gtlos:block/machine/uv_mercury",
+      "y": 270
+    }
+  }
+}

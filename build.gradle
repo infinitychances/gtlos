@@ -147,11 +147,14 @@ dependencies {
     modRuntimeOnly("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
     modRuntimeOnly("dev.emi:emi-forge:${emi_version}+${minecraft_version}")
     modRuntimeOnly("curse.maven:jade-324717:5390389")
+    modRuntimeOnly("curse.maven:building-gadgets-298187:6850495")
 
     //Other mods
     modImplementation("curse.maven:applied-energistics-2-223794:7148487")
     modImplementation("curse.maven:guideme-1173950:7127447")
-    //modImplementation("curse.maven:theurgy-430636:7816723")
+    modImplementation("curse.maven:theurgy-430636:7816723")
+    modImplementation("curse.maven:geckolib-388172:7553267")
+    modImplementation("curse.maven:modonomicon-538392:7446143")
 
 
     // GregTech and dependencies

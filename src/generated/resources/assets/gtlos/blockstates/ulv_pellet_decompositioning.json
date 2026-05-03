@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "gtlos:block/machine/ulv_pellet_decompositioning",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gtlos:block/machine/ulv_pellet_decompositioning"
+    },
+    "facing=south": {
+      "model": "gtlos:block/machine/ulv_pellet_decompositioning",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gtlos:block/machine/ulv_pellet_decompositioning",
+      "y": 270
+    }
+  }
+}
