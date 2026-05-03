@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gtlos:block/machine/pollutionroom"
+    }
+  }
+}

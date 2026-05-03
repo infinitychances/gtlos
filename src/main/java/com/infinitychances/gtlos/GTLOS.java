@@ -140,6 +140,7 @@ public class GTLOS {
      */
     private void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
         // CustomMachines.init();
+	    GTLOSBlocks.init();
 	    GTLOS.REGISTRATE.creativeModeTab(() -> GTLOSCreativeModeTab.MACHINES);
 	    GTLOSMachines.init();
 	    GTLOSMultiblockMachines.init();
