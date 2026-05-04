@@ -3,14 +3,14 @@
   "loader": "gtceu:machine",
   "machine": "gtlos:pollutionroom",
   "texture_overrides": {
-    "all": "minecraft:block/dirt"
+    "all": "gtlos:block/casings/solid/machine_casing_hyperpacked_mud"
   },
   "variants": {
     "is_formed=false,recipe_logic_status=idle": {
       "model": {
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
-          "all": "minecraft:block/dirt",
+          "all": "gtlos:block/casings/solid/machine_casing_hyperpacked_mud",
           "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom",
           "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top"
         }
@@ -20,7 +20,7 @@
       "model": {
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
-          "all": "minecraft:block/dirt",
+          "all": "gtlos:block/casings/solid/machine_casing_hyperpacked_mud",
           "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom",
           "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top"
         }
@@ -30,7 +30,7 @@
       "model": {
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
-          "all": "minecraft:block/dirt",
+          "all": "gtlos:block/casings/solid/machine_casing_hyperpacked_mud",
           "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom_active",
           "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top_active"
         }
@@ -40,7 +40,7 @@
       "model": {
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
-          "all": "minecraft:block/dirt",
+          "all": "gtlos:block/casings/solid/machine_casing_hyperpacked_mud",
           "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom_active",
           "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top_active"
         }
@@ -50,7 +50,7 @@
       "model": {
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
-          "all": "minecraft:block/dirt",
+          "all": "gtlos:block/casings/solid/machine_casing_hyperpacked_mud",
           "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom",
           "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top"
         }
@@ -60,7 +60,7 @@
       "model": {
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
-          "all": "minecraft:block/dirt",
+          "all": "gtlos:block/casings/solid/machine_casing_hyperpacked_mud",
           "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom",
           "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top"
         }
@@ -70,7 +70,7 @@
       "model": {
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
-          "all": "minecraft:block/dirt",
+          "all": "gtlos:block/casings/solid/machine_casing_hyperpacked_mud",
           "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom_active",
           "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top_active"
         }
@@ -80,7 +80,7 @@
       "model": {
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
-          "all": "minecraft:block/dirt",
+          "all": "gtlos:block/casings/solid/machine_casing_hyperpacked_mud",
           "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom_active",
           "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top_active"
         }

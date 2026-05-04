@@ -81,7 +81,11 @@ public class PollutionroomLogic extends RecipeLogic implements IWorkable {
 					return;
 				}
 
-				this.adjustPollutionAmount(false);
+				if(this.machine.getCleanroom() != null) {
+					this.adjustPollutionAmount(true);
+				} else {
+					this.adjustPollutionAmount(false);
+				}
 			}
 		}
 

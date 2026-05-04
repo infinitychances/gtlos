@@ -1,6 +1,7 @@
 {
   "block.gtlos.ev_mercury": "ɹ§III ɹoʇɐɹǝuǝ⅁ ʎɹnɔɹǝW pǝɔuɐʌpⱯϛ§",
   "block.gtlos.hv_mercury": "ɹ§II ɹoʇɐɹǝuǝ⅁ ʎɹnɔɹǝW pǝɔuɐʌpⱯ9§",
+  "block.gtlos.hyperpacked_machine_casing": "buısɐƆ ǝuıɥɔɐW pǝʞɔɐdɹǝdʎH",
   "block.gtlos.lv_mercury": "ɹ§ ɹoʇɐɹǝuǝ⅁ ʎɹnɔɹǝW ɔısɐᗺ",
   "block.gtlos.lv_pellet_decompositioning": "ɹ§ buıuoıʇısodɯoɔǝᗡ ʇǝןןǝԀ ɔısɐᗺ",
   "block.gtlos.mv_mercury": "ɹ§ ɹoʇɐɹǝuǝ⅁ ʎɹnɔɹǝW pǝɔuɐʌpⱯq§",
@@ -14,6 +15,10 @@
   "block.gtlos.x2_coke_oven": "uǝʌO ǝʞoƆ ᄅX",
   "block.gtlos.x4_coke_oven": "uǝʌO ǝʞoƆ ㄣX",
   "block.gtlos.x8_coke_oven": "uǝʌO ǝʞoƆ 8X",
+  "gtlos.multiblock.cleanroom.clean_state": "NⱯƎꞀƆㄣ§ :snʇɐʇS",
+  "gtlos.multiblock.cleanroom.dirty_state": "ᗡƎ⟘ⱯNIWⱯ⟘NOƆɐ§ :snʇɐʇS",
+  "gtlos.multiblock.pollutionroom.dirty_amount": "%s%%ɐ§ :ssǝupǝʇnןןoԀ",
+  "gtlos.recipe.pollutionroom.display_name": "ɯooɹuoıʇnןןoԀ",
   "item.gtlos.blank_universal_circuit": "ʇınɔɹıƆ ןɐsɹǝʌıu∩ ʞuɐןᗺ",
   "item.gtlos.crude_circuit": "ʇınɔɹıƆ ǝpnɹƆ",
   "item.gtlos.hv_universal_circuit": "ʇınɔɹıƆ ןɐsɹǝʌıu∩ ΛH",

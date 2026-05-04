@@ -13,6 +13,7 @@ import com.gregtechceu.gtceu.common.data.GTBlocks;
 import com.gregtechceu.gtceu.common.data.GTMachines;
 import com.gregtechceu.gtceu.config.ConfigHolder;
 import com.gregtechceu.gtceu.utils.GTUtil;
+import com.infinitychances.gtlos.GTLOS;
 import com.infinitychances.gtlos.common.data.GTLOSBlocks;
 import com.infinitychances.gtlos.common.machine.multiblock.electric.PollutionroomMachine;
 import net.minecraft.core.Direction;
@@ -40,7 +41,7 @@ public class GTLOSMultiblockMachines {
 			.multiblock("pollutionroom", PollutionroomMachine::new)
 			.rotationState(RotationState.NONE)
 			.recipeType(DUMMY_RECIPES)
-			.appearanceBlock(() -> Blocks.DIRT)
+			.appearanceBlock(GTLOSBlocks.CASING_HYPERPACKED_MUD)
 			.tooltips(Component.translatable("gtceu.machine.cleanroom.tooltip.0"),
 					Component.translatable("gtceu.machine.cleanroom.tooltip.1"),
 					Component.translatable("gtceu.machine.cleanroom.tooltip.2"),
@@ -70,12 +71,12 @@ public class GTLOSMultiblockMachines {
 					.aisle("XXXXX", "X   X", "X   X", "X   X", "XFSFX")
 					.aisle("XXXXX", "X   X", "X   X", "X   X", "XFFFX")
 					.aisle("XXXXX", "XXXXX", "XXXXX", "XXXXX", "XXXXX")
-					.where('X', blocks(Blocks.DIRT)
+					.where('X', blocks(GTLOSBlocks.CASING_HYPERPACKED_MUD.get())
 							.or(blocks(GTBlocks.CLEANROOM_GLASS.get()))
 							.or(abilities(PartAbility.PASSTHROUGH_HATCH).setMaxGlobalLimited(30, 3))
 							.or(abilities(PartAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(3, 2))
 							.or(blocks(ConfigHolder.INSTANCE.machines.enableMaintenance ?
-									GTMachines.MAINTENANCE_HATCH.getBlock() : Blocks.DIRT).setExactLimit(1))
+									GTMachines.MAINTENANCE_HATCH.getBlock() : GTLOSBlocks.CASING_HYPERPACKED_MUD.get()).setExactLimit(1))
 							.or(blocks(Blocks.IRON_DOOR).setMaxGlobalLimited(8)))
 					.where('S', controller(blocks(definition.getBlock())))
 					.where(' ', any())
@@ -91,7 +92,7 @@ public class GTLOSMultiblockMachines {
 						.aisle("XXXXX", "X   X", "G   G", "X   X", "XFSFX")
 						.aisle("XXXXX", "X   X", "G   G", "X   X", "XFFFX")
 						.aisle("XMXEX", "XXOXX", "XXRXX", "XXXXX", "XXXXX")
-						.where('X', Blocks.DIRT)
+						.where('X', GTLOSBlocks.CASING_HYPERPACKED_MUD)
 						.where('G', GTBlocks.CLEANROOM_GLASS)
 						.where('S', GTLOSMultiblockMachines.POLLUTION_ROOM.getBlock())
 						.where(' ', Blocks.AIR)
@@ -109,7 +110,7 @@ public class GTLOSMultiblockMachines {
 				if (ConfigHolder.INSTANCE.machines.enableMaintenance) {
 					builder.where('M', GTMachines.MAINTENANCE_HATCH, Direction.SOUTH);
 				} else {
-					builder.where('M', Blocks.DIRT);
+					builder.where('M', GTLOSBlocks.CASING_HYPERPACKED_MUD);
 				}
 				shapeInfo.add(builder.build());
 				//GTCEuAPI.CLEANROOM_FILTERS.values().forEach(block -> shapeInfo.add(builder.where('F', block.get()).build()));
@@ -117,7 +118,7 @@ public class GTLOSMultiblockMachines {
 			})
 			.allowExtendedFacing(false)
 			.allowFlip(false)
-			.workableCasingModel(ResourceLocation.withDefaultNamespace("block/dirt"),
+			.workableCasingModel(GTLOS.id("block/casings/solid/machine_casing_hyperpacked_mud"),
 					GTCEu.id("block/multiblock/cleanroom"))
 			.register();
 

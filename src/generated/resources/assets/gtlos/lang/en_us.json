@@ -1,6 +1,7 @@
 {
   "block.gtlos.ev_mercury": "§5Advanced Mercury Generator III§r",
   "block.gtlos.hv_mercury": "§6Advanced Mercury Generator II§r",
+  "block.gtlos.hyperpacked_machine_casing": "Hyperpacked Machine Casing",
   "block.gtlos.lv_mercury": "Basic Mercury Generator §r",
   "block.gtlos.lv_pellet_decompositioning": "Basic Pellet Decompositioning §r",
   "block.gtlos.mv_mercury": "§bAdvanced Mercury Generator §r",
@@ -14,6 +15,10 @@
   "block.gtlos.x2_coke_oven": "X2 Coke Oven",
   "block.gtlos.x4_coke_oven": "X4 Coke Oven",
   "block.gtlos.x8_coke_oven": "X8 Coke Oven",
+  "gtlos.multiblock.cleanroom.clean_state": "Status: §4CLEAN",
+  "gtlos.multiblock.cleanroom.dirty_state": "Status: §aCONTAMINATED",
+  "gtlos.multiblock.pollutionroom.dirty_amount": "Pollutedness: §a%s%%",
+  "gtlos.recipe.pollutionroom.display_name": "Pollutionroom",
   "item.gtlos.blank_universal_circuit": "Blank Universal Circuit",
   "item.gtlos.crude_circuit": "Crude Circuit",
   "item.gtlos.hv_universal_circuit": "HV Universal Circuit",

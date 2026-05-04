@@ -1,5 +1,12 @@
 package com.infinitychances.gtlos.common.data;
 
+import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
+import com.gregtechceu.gtceu.api.data.chemical.material.stack.MaterialEntry;
+import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
+import com.gregtechceu.gtceu.common.data.GTItems;
+import com.gregtechceu.gtceu.common.data.GTMaterials;
+import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
+import com.infinitychances.gtlos.api.PollutionroomTypes;
 import com.infinitychances.gtlos.data.recipe.PelletRecipes;
 import com.klikli_dev.theurgy.registry.ItemRegistry;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -22,5 +29,9 @@ public class GTLOSRecipeInit {
 		GTLOSRecipeTypes.MERCURY_GENERATING.recipeBuilder("crystal").duration(200)
 				.inputItems(ItemRegistry.MERCURY_CRYSTAL.get())
 				.EUt(-V[LV]*4).save(provider);
+
+		GTRecipeTypes.BENDER_RECIPES.recipeBuilder("test").duration(45).EUt(V[UEV]).cleanroom(PollutionroomTypes.POLLUTIONROOM)
+				.inputItems(new MaterialEntry(TagPrefix.ingot, GTMaterials.Aluminium))
+				.outputItems(new MaterialEntry(TagPrefix.plate, GTMaterials.Diamond)).circuitMeta(3).save(provider);
 	}
 }

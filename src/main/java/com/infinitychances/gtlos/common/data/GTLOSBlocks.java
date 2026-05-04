@@ -1,5 +1,6 @@
 package com.infinitychances.gtlos.common.data;
 
+import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.block.ICoilType;
 import com.gregtechceu.gtceu.api.block.IFilterType;
@@ -7,15 +8,18 @@ import com.gregtechceu.gtceu.api.block.SimpleCoilType;
 import com.gregtechceu.gtceu.common.block.CoilBlock;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.common.data.models.GTModels;
+import com.gregtechceu.gtceu.common.registry.GTRegistration;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
 import com.infinitychances.gtlos.GTLOS;
 import com.infinitychances.gtlos.common.block.PollutionroomFilterType;
 import com.infinitychances.gtlos.common.data.models.GTLOSModels;
 import com.tterrag.registrate.builders.BlockBuilder;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
@@ -35,6 +39,14 @@ public class GTLOSBlocks {
 	static {
 		REGISTRATE.creativeModeTab(() -> GTLOSCreativeModeTab.BLOCKS);
 
+	}
+
+	public static BlockEntry<Block> createCasingBlock(String name, ResourceLocation texture) {
+		return createCasingBlock(name, Block::new, texture, () -> Blocks.IRON_BLOCK, () -> RenderType::solid);
+	}
+
+	public static BlockEntry<Block> createCasingBlock(String name, NonNullFunction<BlockBehaviour.Properties, Block> blockSupplier, ResourceLocation texture, NonNullSupplier<? extends Block> properties, Supplier<Supplier<RenderType>> type) {
+		return REGISTRATE.block(name, blockSupplier).initialProperties(properties).properties((p) -> p.isValidSpawn((state, level, pos, ent) -> false)).addLayer(type).exBlockstate(GTModels.cubeAllModel(texture)).tag(CustomTags.MINEABLE_WITH_CONFIG_VALID_PICKAXE_WRENCH).item(BlockItem::new).build().register();
 	}
 
 	private static BlockEntry<Block> createCleanroomFilter(IFilterType filterType, boolean addToFilters) {
@@ -106,7 +118,7 @@ public class GTLOSBlocks {
 
 	public static final BlockEntry<CoilBlock> COIL_RUBIDIUM = createCoilBlock("Rubidium Coil", new SimpleCoilType( "rubidium", 16000, 16, 16, 8, ()->GTMaterials.Rubidium, GTLOS.id("block/casings/coils/machine_coil_rubidium")));
 	public static final BlockEntry<Block> POLLUTING_FILTER = createCleanroomFilter(PollutionroomFilterType.POLLUTION_CASING, false);
-
+	public static final BlockEntry<Block> CASING_HYPERPACKED_MUD = createCasingBlock("hyperpacked_machine_casing", GTLOS.id("block/casings/solid/machine_casing_hyperpacked_mud"));
 
 	public static void init() {
 	}

@@ -45,6 +45,7 @@ import com.gregtechceu.gtceu.common.machine.multiblock.primitive.PrimitivePumpMa
 import com.gregtechceu.gtceu.config.ConfigHolder;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
 import com.gregtechceu.gtceu.utils.GTUtil;
+import com.infinitychances.gtlos.api.PollutionroomTypes;
 import com.infinitychances.gtlos.common.data.GTLOSBlocks;
 import com.infinitychances.gtlos.common.machine.trait.PollutionroomLogic;
 import com.lowdragmc.lowdraglib.syncdata.annotation.Persisted;
@@ -126,7 +127,7 @@ public class PollutionroomMachine extends WorkableElectricMultiblockMachine impl
 		if (filterType != null) {
 			this.cleanroomType = filterType.getCleanroomType();
 		} else {
-			this.cleanroomType = CleanroomType.CLEANROOM;
+			this.cleanroomType = PollutionroomTypes.POLLUTIONROOM;
 		}
 
 		// bind cleanroom
@@ -373,7 +374,7 @@ public class PollutionroomMachine extends WorkableElectricMultiblockMachine impl
 	}
 
 	protected @NotNull BlockState getCasingState() {
-		return Blocks.DIRT.defaultBlockState();
+		return GTLOSBlocks.CASING_HYPERPACKED_MUD.getDefaultState();
 	}
 
 	protected @NotNull BlockState getGlassState() {
@@ -470,12 +471,12 @@ public class PollutionroomMachine extends WorkableElectricMultiblockMachine impl
 			}
 
 			if (this.isClean()) {
-				textList.add(Component.translatable("gtceu.multiblock.cleanroom.clean_state"));
+				textList.add(Component.translatable("gtlos.multiblock.pollutionroom.dirty_state"));
 			} else {
-				textList.add(Component.translatable("gtceu.multiblock.cleanroom.dirty_state"));
+				textList.add(Component.translatable("gtlos.multiblock.pollutionroom.clean_state"));
 			}
 
-			textList.add(Component.translatable("gtceu.multiblock.cleanroom.clean_amount", new Object[]{this.dirtyAmount}));
+			textList.add(Component.translatable("gtlos.multiblock.pollutionroom.dirty_amount", this.dirtyAmount));
 			textList.add(Component.translatable("gtceu.multiblock.dimensions.0"));
 			textList.add(Component.translatable("gtceu.multiblock.dimensions.1", new Object[]{this.lDist + this.rDist + 1, this.hDist + 1, this.fDist + this.bDist + 1}));
 		} else {
