@@ -8,7 +8,7 @@ import com.gregtechceu.gtceu.api.machine.feature.multiblock.IMaintenanceMachine;
 import com.gregtechceu.gtceu.api.machine.trait.RecipeLogic;
 import com.gregtechceu.gtceu.api.recipe.GTRecipe;
 import com.gregtechceu.gtceu.common.capability.EnvironmentalHazardSavedData;
-import com.infinitychances.gtlos.common.machine.multiblock.electric.PollutionroomMachine;
+import com.infinitychances.gtlos.common.machine.multiblock.electric.AbstractCleanroomMachine;
 import com.lowdragmc.lowdraglib.syncdata.annotation.Persisted;
 import com.lowdragmc.lowdraglib.syncdata.field.ManagedFieldHolder;
 import lombok.Getter;
@@ -18,20 +18,20 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import org.jetbrains.annotations.Nullable;
 
-public class PollutionroomLogic extends RecipeLogic implements IWorkable {
-	protected static final ManagedFieldHolder MANAGED_FIELD_HOLDER = new ManagedFieldHolder(PollutionroomLogic.class, RecipeLogic.MANAGED_FIELD_HOLDER);
-	public static final int BASE_DIRTY_AMOUNT = 2;
+public class AbstractCleanroomLogic extends RecipeLogic implements IWorkable {
+	protected static final ManagedFieldHolder MANAGED_FIELD_HOLDER = new ManagedFieldHolder(AbstractCleanroomLogic.class, RecipeLogic.MANAGED_FIELD_HOLDER);
+	public static final int BASE_AMOUNT = 2;
 	private @Setter @Nullable IMaintenanceMachine maintenanceMachine;
 	private @Setter @Nullable IEnergyContainer energyContainer;
 	@Persisted
 	private @Setter @Getter boolean isActiveAndNeedsUpdate;
 
-	public PollutionroomLogic(PollutionroomMachine machine) {
+	public AbstractCleanroomLogic(AbstractCleanroomMachine machine) {
 		super(machine);
 	}
 
-	public PollutionroomMachine getMachine() {
-		return (PollutionroomMachine)this.machine;
+	public AbstractCleanroomMachine getMachine() {
+		return (AbstractCleanroomMachine)this.machine;
 	}
 
 	public ManagedFieldHolder getFieldHolder() {
@@ -92,20 +92,20 @@ public class PollutionroomLogic extends RecipeLogic implements IWorkable {
 	}
 
 	protected void adjustPollutionAmount(boolean declined) {
-		int amountToPollute = BASE_DIRTY_AMOUNT + 3 * (this.getTierDifference() + 1);
+		int amountToClean = BASE_AMOUNT + 3 * (this.getTierDifference() + 1);
 		if (declined) {
-			amountToPollute *= -1;
+			amountToClean *= -1;
 		}
 
 		if (this.maintenanceMachine != null) {
-			amountToPollute -= this.maintenanceMachine.getNumMaintenanceProblems();
+			amountToClean -= this.maintenanceMachine.getNumMaintenanceProblems();
 		}
 
-		this.getMachine().adjustDirtyAmount(amountToPollute);
+		this.getMachine().adjustCleanAmount(amountToClean);
 	}
 
 	protected boolean consumeEnergy() {
-		PollutionroomMachine pollutionroom = this.getMachine();
+		AbstractCleanroomMachine pollutionroom = this.getMachine();
 		int tier = Mth.clamp(pollutionroom.getTier(), 0, 14);
 		long energyToDrain = pollutionroom.isClean() ? Math.max(8L, 3L * GTValues.V[tier] / 16L) : (long)GTValues.VA[tier];
 		if (this.energyContainer != null) {
