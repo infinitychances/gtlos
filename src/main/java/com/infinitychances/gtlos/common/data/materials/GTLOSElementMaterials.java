@@ -2,11 +2,13 @@ package com.infinitychances.gtlos.common.data.materials;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
+import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty;
 import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
 import com.gregtechceu.gtceu.common.data.GTElements;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.infinitychances.gtlos.GTLOS;
+import com.infinitychances.gtlos.api.data.chemical.material.info.GTLOSMaterialFlags;
 import com.infinitychances.gtlos.common.data.GTLOSCreativeModeTab;
 import com.infinitychances.gtlos.common.data.GTLOSElements;
 import com.infinitychances.gtlos.common.util.Math;
@@ -21,7 +23,16 @@ public class GTLOSElementMaterials {
 	public static void register() {
 
 
-		//LATE GAME
+		Thorium228 = new Material.Builder(GTLOS.id("thorium-228"))
+				.liquid(2023)
+				.ingot()
+				.color(0x335128)
+				.secondaryColor(0x0f2f2a)
+				.iconSet(RADIOACTIVE)
+				.element(GTLOSElements.Th228)
+				.flags(GTLOSMaterialFlags.GENERATE_VIAL)
+				.buildAndRegister();
+
 		Illonium = new Material.Builder(GTLOS.id("illonium"))
 				.liquid(new FluidBuilder().temperature(288))
 				.ingot()

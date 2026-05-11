@@ -1,4 +1,5 @@
 {
+  "block.gtlos.crystal_growth_chamber": "Crystal Growth Chamber",
   "block.gtlos.ev_mercury": "§5Advanced Mercury Generator III§r",
   "block.gtlos.hv_mercury": "§6Advanced Mercury Generator II§r",
   "block.gtlos.hyperpacked_machine_casing": "Hyperpacked Machine Casing",
@@ -35,6 +36,7 @@
   "material.gtlos.fluix": "Fluix",
   "material.gtlos.illonium": "Illonium",
   "material.gtlos.spacium": "Spacium",
+  "material.gtlos.thorium-228": "Thorium-228",
   "tooltip.gtlos.machine.coke_oven_description": "Making better fuels for Steel and Power",
   "tooltip.gtlos.machine.coke_oven_parallels": "Gains Parallels with each layer added in length for a maximum of %s parallels total"
 }

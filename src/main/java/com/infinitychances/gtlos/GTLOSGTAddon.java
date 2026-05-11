@@ -7,6 +7,7 @@ import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 
+import com.infinitychances.gtlos.api.data.tag.GTLOSTagPrefixes;
 import com.infinitychances.gtlos.common.data.GTLOSElements;
 import com.infinitychances.gtlos.common.data.GTLOSMaterials;
 import com.infinitychances.gtlos.common.data.GTLOSRecipeTypes;
@@ -35,6 +36,7 @@ public class GTLOSGTAddon implements IGTAddon {
     @Override
     public void registerTagPrefixes() {
         // CustomTagPrefixes.init();
+	    GTLOSTagPrefixes.init();
 	    TagPrefix.block.setIgnored(GTLOSMaterials.Fluix, AEBlocks.FLUIX_BLOCK);
     }
 

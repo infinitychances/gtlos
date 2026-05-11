@@ -6,15 +6,19 @@ import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.RotationState;
 import com.gregtechceu.gtceu.api.machine.MultiblockMachineDefinition;
+import com.gregtechceu.gtceu.api.machine.multiblock.MultiblockControllerMachine;
 import com.gregtechceu.gtceu.api.machine.multiblock.PartAbility;
+import com.gregtechceu.gtceu.api.machine.multiblock.WorkableElectricMultiblockMachine;
 import com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern;
 import com.gregtechceu.gtceu.api.pattern.MultiblockShapeInfo;
 import com.gregtechceu.gtceu.common.data.GTBlocks;
 import com.gregtechceu.gtceu.common.data.GTMachines;
+import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.config.ConfigHolder;
 import com.gregtechceu.gtceu.utils.GTUtil;
 import com.infinitychances.gtlos.GTLOS;
 import com.infinitychances.gtlos.common.data.GTLOSBlocks;
+import com.infinitychances.gtlos.common.data.GTLOSRecipeTypes;
 import com.infinitychances.gtlos.common.machine.multiblock.electric.PollutionroomMachine;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -65,7 +69,7 @@ public class GTLOSMultiblockMachines {
 					tooltip.add(Component.translatable("gtceu.machine.cleanroom.tooltip.hold_ctrl"));
 				}
 			})
-			.pattern((definition) -> FactoryBlockPattern.start()
+			.pattern((definition) -> { return FactoryBlockPattern.start()
 					.aisle("XXXXX", "XXXXX", "XXXXX", "XXXXX", "XXXXX")
 					.aisle("XXXXX", "X   X", "X   X", "X   X", "XFFFX")
 					.aisle("XXXXX", "X   X", "X   X", "X   X", "XFSFX")
@@ -83,7 +87,7 @@ public class GTLOSMultiblockMachines {
 					.where('E', abilities(PartAbility.INPUT_ENERGY))
 					.where('F', blocks(GTLOSBlocks.POLLUTING_FILTER.get()))
 					.where('I', abilities(PartAbility.PASSTHROUGH_HATCH))
-					.build())
+					.build();})
 			.shapeInfos((controller) -> {
 				ArrayList<MultiblockShapeInfo> shapeInfo = new ArrayList<>();
 				MultiblockShapeInfo.ShapeInfoBuilder builder = MultiblockShapeInfo.builder()
@@ -121,5 +125,43 @@ public class GTLOSMultiblockMachines {
 			.workableCasingModel(GTLOS.id("block/casings/solid/machine_casing_hyperpacked_mud"),
 					GTCEu.id("block/multiblock/cleanroom"))
 			.register();
-
+	public static final MultiblockMachineDefinition CRYSTAL_GROWTH_CHAMBER = REGISTRATE
+			.multiblock("crystal_growth_chamber", WorkableElectricMultiblockMachine::new)
+			.rotationState(RotationState.ALL)
+			.recipeType(GTLOSRecipeTypes.CRYSTAL_GROWTH)
+			.appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)
+			//.tooltips()
+			.pattern(def -> {
+				return FactoryBlockPattern.start()
+						.aisle("XXX", "XXX", "XXX")
+						.aisle("XXX", "XTX", "XXX")
+						.aisle("XXX", "XCX", "XXX")
+						.where('T', blocks(GTBlocks.CASING_TEMPERED_GLASS.get()))
+						.where('C', controller(blocks(def.getBlock())))
+						.where('X', blocks(GTBlocks.CASING_TITANIUM_STABLE.get())
+								.or(abilities(PartAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(2))
+								.or(blocks(ConfigHolder.INSTANCE.machines.enableMaintenance ?
+										GTMachines.MAINTENANCE_HATCH.getBlock() : GTBlocks.CASING_TITANIUM_STABLE.get()).setExactLimit(1))
+								.or(abilities(PartAbility.IMPORT_ITEMS).setExactLimit(1))
+								.or(abilities(PartAbility.EXPORT_ITEMS).setExactLimit(1)))
+						.build();
+			})
+			.shapeInfos(def -> {
+				ArrayList<MultiblockShapeInfo> infos = new ArrayList<>();
+				MultiblockShapeInfo.builder()
+						.aisle("XXX", "XXX", "EXE")
+						.aisle("XXX", "XTM", "XXX")
+						.aisle("XXX", "ICO", "XXX")
+						.where('T', GTBlocks.CASING_TEMPERED_GLASS.get())
+						.where('C', def.getBlock())
+						.where('X', GTBlocks.CASING_TITANIUM_STABLE.get())
+						.where('E', GTMachines.ENERGY_INPUT_HATCH[3].getBlock())
+						.where( 'M', ConfigHolder.INSTANCE.machines.enableMaintenance ?
+										GTMachines.MAINTENANCE_HATCH.getBlock() : GTBlocks.CASING_TITANIUM_STABLE.get())
+						.where('I', GTMachines.ITEM_IMPORT_BUS[3].getBlock())
+						.where('O', GTMachines.ITEM_EXPORT_BUS[3].getBlock()).build();
+				return infos;
+			})
+			.workableCasingModel(GTCEu.id("block/casings/solid/machine_casing_stable_titanium"),
+					GTCEu.id("block/multiblock/cleanroom")).register();
 }

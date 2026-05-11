@@ -1,4 +1,5 @@
 {
+  "block.gtlos.crystal_growth_chamber": "ɹǝqɯɐɥƆ ɥʇʍoɹ⅁ ןɐʇsʎɹƆ",
   "block.gtlos.ev_mercury": "ɹ§III ɹoʇɐɹǝuǝ⅁ ʎɹnɔɹǝW pǝɔuɐʌpⱯϛ§",
   "block.gtlos.hv_mercury": "ɹ§II ɹoʇɐɹǝuǝ⅁ ʎɹnɔɹǝW pǝɔuɐʌpⱯ9§",
   "block.gtlos.hyperpacked_machine_casing": "buısɐƆ ǝuıɥɔɐW pǝʞɔɐdɹǝdʎH",
@@ -35,6 +36,7 @@
   "material.gtlos.fluix": "xınןℲ",
   "material.gtlos.illonium": "ɯnıuoןןI",
   "material.gtlos.spacium": "ɯnıɔɐdS",
+  "material.gtlos.thorium-228": "8ᄅᄅ-ɯnıɹoɥ⟘",
   "tooltip.gtlos.machine.coke_oven_description": "ɹǝʍoԀ puɐ ןǝǝʇS ɹoɟ sןǝnɟ ɹǝʇʇǝq buıʞɐW",
   "tooltip.gtlos.machine.coke_oven_parallels": "ןɐʇoʇ sןǝןןɐɹɐd %s ɟo ɯnɯıxɐɯ ɐ ɹoɟ ɥʇbuǝן uı pǝppɐ ɹǝʎɐן ɥɔɐǝ ɥʇıʍ sןǝןןɐɹɐԀ suıɐ⅁"
 }

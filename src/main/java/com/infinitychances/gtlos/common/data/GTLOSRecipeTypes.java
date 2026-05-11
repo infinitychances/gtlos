@@ -5,6 +5,7 @@ import com.gregtechceu.gtceu.api.capability.recipe.IO;
 import com.gregtechceu.gtceu.api.gui.GuiTextures;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeSerializer;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
+import com.gregtechceu.gtceu.api.recipe.chance.boost.ChanceBoostFunction;
 import com.gregtechceu.gtceu.api.registry.GTRegistries;
 import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
 import com.gregtechceu.gtceu.common.data.GTSoundEntries;
@@ -29,7 +30,12 @@ public class GTLOSRecipeTypes {
 			.setSlotOverlay(false, false, GuiTextures.FURNACE_OVERLAY_2)
 			.setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, ProgressTexture.FillDirection.LEFT_TO_RIGHT)
 			.setSound(GTSoundEntries.BOILER);
-
+	public static final GTRecipeType CRYSTAL_GROWTH = register("crystal_growth", GTRecipeTypes.ELECTRIC)
+			.setMaxIOSize(1, 1,0,0)
+			.setEUIO(IO.IN);
+	public static final GTRecipeType DECAY_CHAIN = register("decay_chain", GTRecipeTypes.ELECTRIC)
+			.setMaxIOSize(1, 2, 1,2)
+			.setEUIO(IO.IN);
 
 	public static GTRecipeType register(String name, String group, RecipeType<?>... proxyRecipes) {
 		GTRecipeType recipeType = new GTRecipeType(GTLOS.id(name), group, proxyRecipes);

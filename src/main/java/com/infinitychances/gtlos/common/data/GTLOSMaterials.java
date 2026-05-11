@@ -21,6 +21,7 @@ public class GTLOSMaterials {
 
 
 	//Element Materials
+	public static Material Thorium228;
 	public static Material Illonium;
 	public static Material EnrichedIllonium;
 	public static Material UnstableIllonium;
