@@ -30,9 +30,14 @@ public class GTLOSMaterialMods {
 		GTMaterials.Radium.addFlags(GTLOSMaterialFlags.GENERATE_VIAL);
 	}
 
+	private static void basicVials() {
+		GTMaterials.Thorium.addFlags(GTLOSMaterialFlags.GENERATE_VIAL);
+	}
+
 	public static void init() {
 		changeTerbium();
 		addRubidium();
 		radiumChanges();
+		basicVials();
 	}
 }

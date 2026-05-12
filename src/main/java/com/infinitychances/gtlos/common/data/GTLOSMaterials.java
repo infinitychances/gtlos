@@ -21,11 +21,32 @@ public class GTLOSMaterials {
 
 
 	//Element Materials
-	public static Material Thorium228;
 	public static Material Illonium;
 	public static Material EnrichedIllonium;
 	public static Material UnstableIllonium;
 	public static Material Spacium;
+
+	//Thorium Series
+	public static Material Thorium228;
+
+	//Uranium Series
+	public static Material Thorium234;
+	public static Material Protactinium234;
+	public static Material Uranium234;
+	public static Material Radium226;
+	public static Material Radon222;
+	public static Material Polonium218;
+	public static Material Lead214;
+	public static Material Bismuth214;
+	public static Material Polonium214;
+	public static Material Lead210;
+	public static Material Bismuth210;
+	public static Material Polonium210;
+	public static Material Lead206;
+	public static Material Astatine218;
+	public static Material Thallium210;
+	public static Material Mercury206;
+	public static Material Thallium206;
 
 	//Second Degree Materials
 	public static Material Fluix;

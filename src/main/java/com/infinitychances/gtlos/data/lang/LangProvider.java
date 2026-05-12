@@ -11,5 +11,6 @@ public class LangProvider {
 		provider.add("gtlos.multiblock.pollutionroom.dirty_amount", "Pollutedness: §a%s%%");
 		provider.add("gtlos.multiblock.pollutionroom.clean_state", "Status: §4CLEAN");
 		provider.add("gtlos.multiblock.pollutionroom.dirty_state", "Status: §aCONTAMINATED");
+		provider.add("tagprefix.vial", "%s Vial");
 	}
 }
