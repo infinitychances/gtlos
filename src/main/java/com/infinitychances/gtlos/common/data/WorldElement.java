@@ -111,39 +111,39 @@ public record WorldElement(String name, String shortName, long protons, int colo
 	public static final WorldElement Thorium = new WorldElement("Thorium", "Th", 90, 0x25411b, 0x051E05, 2023);
 	public static final WorldElement Protactinium = new WorldElement("Protactinium", "Pa", 91, 0xA78B6D, -1, 1841);
 	public static final WorldElement Uranium = new WorldElement("Uranium", "U", 92, 0x1d891d, 0x33342c, 1405);
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
-	public static final WorldElement
+	public static final WorldElement Neptunium = new WorldElement("Neptunium", "Np", 93, 0x284D7B, -1, 912);
+	public static final WorldElement Plutonium = new WorldElement("Plutonium", "Pu", 94, 0xba2727, 0x222730, 913);
+	public static final WorldElement Americium = new WorldElement("Americium", "Am", 95, 0x287869, -1, 1449);
+	public static final WorldElement Curium = new WorldElement("Curium", "Cm", 96, 0x7B544E, -1, 1613);
+	public static final WorldElement Berkelium = new WorldElement("Berkelium", "Bk", 97, 0x645A88, -1, 1259);
+	public static final WorldElement Californium = new WorldElement("Californium", "Cf", 98, 0xA85A12, -1, 1173);
+	public static final WorldElement Einsteinium = new WorldElement("Einsteinium", "Es", 99, 0xCE9F00, -1, 1133);
+	public static final WorldElement Fermium = new WorldElement("Fermium", "Fm", 100, 0xc99fe7, 0x890085, 1800); //PREDICTED PAST HERE FOR REAL ELEMENTS
+	public static final WorldElement Mendelevium = new WorldElement("Mendelevium", "Md", 101, 0x1D4ACF, -1, 1100);
+	public static final WorldElement Nobelium = new WorldElement("Nobelium", "No", 102, 0x3E4758, 0x43DEFF, 1100);
+	public static final WorldElement Lawrencium = new WorldElement("Lawrencium", "Lr", 103, 0x5D7575, -1, 1900);
+	public static final WorldElement Rutherfordium = new WorldElement("Rutherfordium", "Rf", 104, 0x6b6157, 0xFFF6A1, 2400);
+	public static final WorldElement Dubnium = new WorldElement("Dubnium", "Db", 105, 0xc7ddde, 0x00f3ff, 3000); //ESTIMATED PAST HERE FOR REAL ELEMENTS
+	public static final WorldElement Seaborgium = new WorldElement("Seaborgium", "Sg", 106, 0x19C5FF, 0xff19b2, 3400);
+	public static final WorldElement Bohrium = new WorldElement("Bohrium", "Bh", 107, 0xde67ff, 0xDC57FF, 3250);
+	public static final WorldElement Hassium = new WorldElement("Hassium", "Hs", 108, 0x738786, 0x62ffd5, 2600);
+	public static final WorldElement Meitnerium = new WorldElement("Meitnerium", "Mt", 109, 0x4F3C82, 0x6E90FF, 2100);
+	public static final WorldElement Darmstadtium = new WorldElement("Darmstadtium", "Ds", 110, 0x578062, -1, 1900);
+	public static final WorldElement Roentgenium = new WorldElement("Roentgenium", "Rg", 111, 0x388c48, 0x198a92, 1400);
+	public static final WorldElement Copernicium = new WorldElement("Copernicium", "Cn", 112, 0x565c5d, 0xffd34b, 500);
+	public static final WorldElement Nihonium = new WorldElement("Nihonium", "Nh", 113, 0x323957, 0xBFABFF, 600);
+	public static final WorldElement Flerovium = new WorldElement("Flerovium", "Fl", 114, 0x2a384e, 0xd2ff00, 600);
+	public static final WorldElement Moscovium = new WorldElement("Moscovium", "Mc", 115, 0x2A1B40, 0xBD91FF, 500);
+	public static final WorldElement Livermorium = new WorldElement("Livermorium", "Lv", 116, 0x939393, 0xff5e5e, 400);
+	public static final WorldElement Tennessine = new WorldElement("Tennessine", "Ts", 117, 0x785cc4, 0x7959d4, 300);
+	public static final WorldElement Oganesson = new WorldElement("Oganesson", "Og", 118, 0x443936, 0xFF1DBD, 210);
+	public static final WorldElement Tritanium = new WorldElement("Tritanium", "Tr", 119, 0xC35769, 0x210840, 25000);
+	public static final WorldElement Duranium = new WorldElement("Duranium", "Dr", 120, 0xF3E7A9, 0x9C9487, 7500);
 
 
 
 
-	public static final WorldElement
+	public static final WorldElement Trinium = new WorldElement("Trinium", "Ke", 125, 0x81808A, 0x351d4b, 6922);
 
 	public IsotopedElement isotope(long isotope, DecayHolder decay) {
 		return isotope(isotope, decay, 1);
