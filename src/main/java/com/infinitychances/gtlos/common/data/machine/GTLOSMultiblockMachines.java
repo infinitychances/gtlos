@@ -25,6 +25,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 
 import java.util.ArrayList;
@@ -139,29 +140,30 @@ public class GTLOSMultiblockMachines {
 						.where('T', blocks(GTBlocks.CASING_TEMPERED_GLASS.get()))
 						.where('C', controller(blocks(def.getBlock())))
 						.where('X', blocks(GTBlocks.CASING_TITANIUM_STABLE.get())
-								.or(abilities(PartAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(2))
-								.or(blocks(ConfigHolder.INSTANCE.machines.enableMaintenance ?
-										GTMachines.MAINTENANCE_HATCH.getBlock() : GTBlocks.CASING_TITANIUM_STABLE.get()).setExactLimit(1))
+								.or(abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
+								.or(ConfigHolder.INSTANCE.machines.enableMaintenance ?
+										abilities(PartAbility.MAINTENANCE).setExactLimit(1) : blocks(GTBlocks.CASING_TITANIUM_STABLE.get()))
 								.or(abilities(PartAbility.IMPORT_ITEMS).setExactLimit(1))
 								.or(abilities(PartAbility.EXPORT_ITEMS).setExactLimit(1)))
 						.build();
 			})
 			.shapeInfos(def -> {
 				ArrayList<MultiblockShapeInfo> infos = new ArrayList<>();
-				MultiblockShapeInfo.builder()
-						.aisle("XXX", "XXX", "EXE")
-						.aisle("XXX", "XTM", "XXX")
-						.aisle("XXX", "ICO", "XXX")
+				var i = MultiblockShapeInfo.builder()
+						.aisle("XXX", "ICO", "XMX")
+						.aisle("XXX", "XTX", "XXX")
+						.aisle("EXE", "XXX", "XXX")
 						.where('T', GTBlocks.CASING_TEMPERED_GLASS.get())
 						.where('C', def.getBlock())
 						.where('X', GTBlocks.CASING_TITANIUM_STABLE.get())
-						.where('E', GTMachines.ENERGY_INPUT_HATCH[3].getBlock())
+						.where('E', GTMachines.ENERGY_INPUT_HATCH[GTValues.HV].defaultBlockState().setValue(BlockStateProperties.FACING, Direction.SOUTH))
 						.where( 'M', ConfigHolder.INSTANCE.machines.enableMaintenance ?
 										GTMachines.MAINTENANCE_HATCH.getBlock() : GTBlocks.CASING_TITANIUM_STABLE.get())
-						.where('I', GTMachines.ITEM_IMPORT_BUS[3].getBlock())
-						.where('O', GTMachines.ITEM_EXPORT_BUS[3].getBlock()).build();
+						.where('I', GTMachines.ITEM_IMPORT_BUS[GTValues.HV].getBlock())
+						.where('O', GTMachines.ITEM_EXPORT_BUS[GTValues.HV].getBlock()).build();
+				infos.add(i);
 				return infos;
 			})
 			.workableCasingModel(GTCEu.id("block/casings/solid/machine_casing_stable_titanium"),
-					GTCEu.id("block/multiblock/cleanroom")).register();
+					GTLOS.id("block/multiblock/crystal_growth_chamber")).register();
 }

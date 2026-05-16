@@ -11,8 +11,7 @@
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
           "all": "gtceu:block/casings/solid/machine_casing_stable_titanium",
-          "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom",
-          "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top"
+          "overlay_front": "gtlos:block/multiblock/crystal_growth_chamber/overlay_front"
         }
       }
     },
@@ -21,8 +20,7 @@
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
           "all": "gtceu:block/casings/solid/machine_casing_stable_titanium",
-          "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom",
-          "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top"
+          "overlay_front": "gtlos:block/multiblock/crystal_growth_chamber/overlay_front"
         }
       }
     },
@@ -31,8 +29,7 @@
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
           "all": "gtceu:block/casings/solid/machine_casing_stable_titanium",
-          "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom_active",
-          "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top_active"
+          "overlay_front": "gtlos:block/multiblock/crystal_growth_chamber/overlay_front_active"
         }
       }
     },
@@ -41,8 +38,7 @@
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
           "all": "gtceu:block/casings/solid/machine_casing_stable_titanium",
-          "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom_active",
-          "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top_active"
+          "overlay_front": "gtlos:block/multiblock/crystal_growth_chamber/overlay_front_active"
         }
       }
     },
@@ -51,8 +47,7 @@
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
           "all": "gtceu:block/casings/solid/machine_casing_stable_titanium",
-          "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom",
-          "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top"
+          "overlay_front": "gtlos:block/multiblock/crystal_growth_chamber/overlay_front"
         }
       }
     },
@@ -61,8 +56,7 @@
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
           "all": "gtceu:block/casings/solid/machine_casing_stable_titanium",
-          "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom",
-          "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top"
+          "overlay_front": "gtlos:block/multiblock/crystal_growth_chamber/overlay_front"
         }
       }
     },
@@ -71,8 +65,7 @@
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
           "all": "gtceu:block/casings/solid/machine_casing_stable_titanium",
-          "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom_active",
-          "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top_active"
+          "overlay_front": "gtlos:block/multiblock/crystal_growth_chamber/overlay_front_active"
         }
       }
     },
@@ -81,8 +74,7 @@
         "parent": "gtceu:block/machine/template/cube_all/sided",
         "textures": {
           "all": "gtceu:block/casings/solid/machine_casing_stable_titanium",
-          "overlay_bottom": "gtceu:block/multiblock/cleanroom/overlay_bottom_active",
-          "overlay_top": "gtceu:block/multiblock/cleanroom/overlay_top_active"
+          "overlay_front": "gtlos:block/multiblock/crystal_growth_chamber/overlay_front_active"
         }
       }
     }
