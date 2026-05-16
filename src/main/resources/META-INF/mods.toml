@@ -40,3 +40,23 @@ CoreMod for Gregtech: Lost in Space
         versionRange = "[${gtceu_version},)"
         ordering = "AFTER"
         side = "BOTH"
+    [[dependencies.${mod_id}]]
+        modId = "theurgy"
+        mandatory = true
+        versionRange = "1.28.0"
+        side = "BOTH"
+    [[dependencies.${mod_id}]]
+        modId = "ae2"
+        mandatory = true
+        versionRange = "15.4.10"
+        side = "BOTH"
+    [[dependencies.${mod_id}]]
+        modId = "ad_astra"
+        mandatory = true
+        versionRange = "1.15.20"
+        side = "BOTH"
+    [[dependencies.${mod_id}]]
+        modId = "ad_astra_rocketed"
+        mandatory = true
+        versionRange = "1.0.5"
+        side = "BOTH"

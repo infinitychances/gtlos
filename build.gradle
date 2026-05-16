@@ -156,6 +156,13 @@ dependencies {
     modImplementation("curse.maven:geckolib-388172:7553267")
     modImplementation("curse.maven:modonomicon-538392:7446143")
 
+    //Ad astra + deps
+    modImplementation("curse.maven:botarium-704113:5486070")
+    modImplementation("curse.maven:resourceful-config-714059:6231176")
+    modImplementation("curse.maven:resourceful-lib-570073:5659871")
+    modImplementation("curse.maven:ad-astra-635042:6262032")
+    modImplementation("curse.maven:ad-astra-rocketed-996980:5245376")
+
 
     // GregTech and dependencies
     modImplementation("com.gregtechceu.gtceu:gtceu-${minecraft_version}:${gtceu_version}:slim") { transitive = false }
