@@ -1,0 +1,9 @@
+{
+  "values": [
+    "gtlos:crude_circuit",
+    "gtlos:ulv_universal_circuit",
+    "gtlos:lv_universal_circuit",
+    "gtlos:mv_universal_circuit",
+    "gtlos:hv_universal_circuit"
+  ]
+}
