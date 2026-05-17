@@ -10,9 +10,13 @@ import com.gregtechceu.gtceu.api.registry.GTRegistries;
 import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
 import com.gregtechceu.gtceu.common.data.GTSoundEntries;
 import com.infinitychances.gtlos.GTLOS;
+import com.infinitychances.gtlos.common.data.machine.GTLOSMultiblockMachines;
 import com.lowdragmc.lowdraglib.gui.texture.ProgressTexture;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
+
+import java.util.function.Supplier;
 
 @SuppressWarnings("deprecation")
 public class GTLOSRecipeTypes {
@@ -32,6 +36,7 @@ public class GTLOSRecipeTypes {
 			.setSound(GTSoundEntries.BOILER);
 	public static final GTRecipeType CRYSTAL_GROWTH = register("crystal_growth", GTRecipeTypes.ELECTRIC)
 			.setMaxIOSize(1, 1,0,0)
+			//.setIconSupplier(() -> new ItemStack(GTLOSMultiblockMachines.CRYSTAL_GROWTH_CHAMBER.getBlock()))
 			.setEUIO(IO.IN);
 	public static final GTRecipeType DECAY_CHAIN = register("decay_chain", GTRecipeTypes.ELECTRIC)
 			.setMaxIOSize(1, 2, 1,2)

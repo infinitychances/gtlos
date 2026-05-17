@@ -3,6 +3,7 @@ package com.infinitychances.gtlos.common.data;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.infinitychances.gtlos.GTLOS;
 import com.infinitychances.gtlos.common.data.materials.GTLOSElementMaterials;
+import com.infinitychances.gtlos.common.data.materials.GTLOSFirstDegreeMaterials;
 import com.infinitychances.gtlos.common.data.materials.GTLOSFluids;
 import com.infinitychances.gtlos.common.data.materials.GTLOSSecondDegreeMaterials;
 
@@ -10,8 +11,9 @@ public class GTLOSMaterials {
 	public static void init() {
 		GTLOS.REGISTRATE.creativeModeTab(() -> GTLOSCreativeModeTab.MAIN);
 		GTLOSElementMaterials.register();
-		GTLOSFluids.register();
+		GTLOSFirstDegreeMaterials.register();
 		GTLOSSecondDegreeMaterials.register();
+		GTLOSFluids.register();
 	}
 
 	//Chemicals/Fluids
@@ -25,6 +27,12 @@ public class GTLOSMaterials {
 	public static Material EnrichedIllonium;
 	public static Material UnstableIllonium;
 	public static Material Spacium;
+
+	//First Degree Materials
+	public static Material ChargedCertusQuartz;
+
+	//Second Degree Materials
+	public static Material Fluix;
 
 	//Thorium Series
 	public static Material Thorium228;
@@ -47,7 +55,4 @@ public class GTLOSMaterials {
 	public static Material Thallium210;
 	public static Material Mercury206;
 	public static Material Thallium206;
-
-	//Second Degree Materials
-	public static Material Fluix;
 }

@@ -7,6 +7,7 @@ import com.gregtechceu.gtceu.common.data.GTItems;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
 import com.infinitychances.gtlos.api.PollutionroomTypes;
+import com.infinitychances.gtlos.data.recipe.CrystalChamberRecipes;
 import com.infinitychances.gtlos.data.recipe.DecayChainRecipes;
 import com.infinitychances.gtlos.data.recipe.PelletRecipes;
 import com.klikli_dev.theurgy.registry.ItemRegistry;
@@ -20,6 +21,7 @@ public class GTLOSRecipeInit {
 	public static void init(Consumer<FinishedRecipe> provider) {
 		PelletRecipes.init(provider);
 		DecayChainRecipes.init(provider);
+		CrystalChamberRecipes.init(provider);
 		doMercuryGen(provider);
 	}
 
