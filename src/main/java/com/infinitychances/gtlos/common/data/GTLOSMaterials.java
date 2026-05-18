@@ -16,6 +16,8 @@ public class GTLOSMaterials {
 		GTLOSFluids.register();
 	}
 
+	public static Material PositivelyCharged;
+
 	//Chemicals/Fluids
 	public static Material BioSolder;
 	public static Material Polypropylene;

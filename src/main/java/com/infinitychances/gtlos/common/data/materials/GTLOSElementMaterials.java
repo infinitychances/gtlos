@@ -2,7 +2,6 @@ package com.infinitychances.gtlos.common.data.materials;
 
 import com.gregtechceu.gtceu.api.data.chemical.Element;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
-import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty;
 import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
@@ -10,7 +9,6 @@ import com.gregtechceu.gtceu.common.data.GTElements;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.infinitychances.gtlos.GTLOS;
 import com.infinitychances.gtlos.api.data.chemical.material.info.GTLOSMaterialFlags;
-import com.infinitychances.gtlos.common.data.GTLOSCreativeModeTab;
 import com.infinitychances.gtlos.common.data.GTLOSElements;
 import com.infinitychances.gtlos.common.util.Math;
 
@@ -45,6 +43,11 @@ public class GTLOSElementMaterials {
 	}
 
 	public static void register() {
+
+		PositivelyCharged = new Material.Builder(GTLOS.id("plus"))
+				.color(0xFFFFFF)
+				.element(GTLOSElements.PLUS)
+				.register();
 
 		Thorium228 = makeVialMaterial(GTLOSElements.Th228, 0x418a3e, 0x214037, RADIOACTIVE, 2023).buildAndRegister();
 

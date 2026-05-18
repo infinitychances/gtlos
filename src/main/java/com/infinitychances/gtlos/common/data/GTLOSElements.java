@@ -82,6 +82,7 @@ public class GTLOSElements {
 	public static final IsotopedElement Hg206 = Mercury.isotope(206, Thallium.isotope(206)); //80, 126
 	public static final IsotopedElement Tl206 = Thallium.isotope(206, Lead.isotope(206)); //81, 125
 
+	public static final Element PLUS = make("Plus", "+", 0, 0);
 	public static final Element Nx = make("Null", "Nx", 0,0);
 	public static final Element Ex = make("Extrenum", "Ex", 121, 194);
 	public static final Element Il = make("Illonium", "Il", 176L, 360L);

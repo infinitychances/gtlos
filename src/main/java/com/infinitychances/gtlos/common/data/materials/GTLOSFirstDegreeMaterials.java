@@ -5,7 +5,6 @@ import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.infinitychances.gtlos.GTLOS;
 
 import static com.infinitychances.gtlos.common.data.GTLOSMaterials.*;
-import static com.gregtechceu.gtceu.api.GTValues.*;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet.*;
 
@@ -16,8 +15,8 @@ public class GTLOSFirstDegreeMaterials {
 				.color(0x8EDFDB)
 				.iconSet(CERTUS)
 				.flags(GENERATE_PLATE, DISABLE_DECOMPOSITION)
-				.components(GTMaterials.CertusQuartz, 1)
-				.formula("(SiO2)+", true)
+				.components(GTMaterials.CertusQuartz, 1, PositivelyCharged, 1)
+				//.formula("(SiO2)+", true)
 				.register();
 	}
 }
