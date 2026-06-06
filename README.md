@@ -1,5 +1,7 @@
 # Coremod for Gregtech: Lost in Space
 
+##THIS REPO HAS BEEN MOVED TO CODEBERG: https://codeberg.org/Infinitychances/gtlos
+
 ### Use in Other Modpacks
 This mod *could* be used in other modpacks, but be warned: all features are made specifically for Gregtech: 
 Lost In Space, and almost all recipes are not added in the coremod (this may change at any point).
