@@ -1,6 +1,6 @@
 # Coremod for Gregtech: Lost in Space
 
-##THIS REPO HAS BEEN MOVED TO CODEBERG: https://codeberg.org/Infinitychances/gtlos
+## THIS REPO HAS BEEN MOVED TO CODEBERG: https://codeberg.org/Infinitychances/gtlos
 
 ### Use in Other Modpacks
 This mod *could* be used in other modpacks, but be warned: all features are made specifically for Gregtech: 
